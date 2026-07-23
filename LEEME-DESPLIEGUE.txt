@@ -1,0 +1,63 @@
+COLMEDICA - PLANES LIVIANOS (HTML limpio, sin CMS)
+====================================================
+
+CONTENIDO
+  livianos.html                      -> la pagina principal
+  plan-esmeralda-ambulatorio.html    -> interna Plan Esmeralda Ambulatorio
+  plan-domiciliario-superior.html    -> interna Plan Domiciliario Superior
+  plan-oncologico-vida-plus.html     -> interna Plan Oncologico Vida Plus
+  livianos/css/estilos.css           -> estilos (los MISMOS tokens y componentes de la landing de planes + secciones nuevas al final)
+  livianos/js/app.js                 -> logica: UTM, botones, carrusel, modales, videobot
+  livianos/fotos/                    -> imagenes, iconos, logos, sellos vigilado
+  livianos/videos/                   -> video de bienvenida + videos de los 3 planes (descargados del sitio actual)
+  livianos/videobot/                 -> los 21 videos del bot + portada + boton play
+  livianos/docs/                     -> folletos PDF de los 3 planes
+
+DESPLIEGUE: sube los 4 .html + la carpeta livianos/ a la raiz del sitio (conserva subcarpetas).
+  Rutas relativas -> funciona en cualquier dominio sin editar nada.
+
+LO QUE PIDIO EL CLIENTE (video de WhatsApp)
+  1. VIGILADO: todos los videos llevan el sello "Vigilado Supersalud" superpuesto por HTML/CSS
+     (clase .vigilado-video). Ya no depende de editar los videos. Esta en: video principal,
+     modales de plan, videos de las internas y los 21 videos del videobot.
+  2. BENEFICIOS: la seccion "Mas beneficios para tu bienestar" es la MISMA seccion de planes de la
+     landing (mismo diseno y estructura), al reves y sin livianos: empieza en Hospitalarios,
+     sigue Caobo, Ambar, Rubi, Zafiro y termina en Diamante. Ya no es un iframe.
+  3. VIDEOBOT: integrado directamente en la pagina (sin iframe), reescrito sin Bootstrap con el
+     mismo flujo de preguntas, los mismos videos y los mismos enlaces con UTM (utm_source=videobot).
+     Cuando recomienda Esmeralda / Domiciliario Superior / Oncologico enlaza a las internas nuevas.
+  4. INTERNAS: cada plan tiene su pagina con video en modal/inline, acordeones (Detalles, Ventas a
+     personas con residencia en, Beneficios, Coberturas), folleto PDF descargable y barra flotante
+     de compra. El contenido es el REAL del sitio actual (extraido de la API del portal).
+
+BOTONES Y UTM (misma operacion de la landing / sitio actual)
+  - Si la pagina llega CON parametros (?utm_..., gclid, fbclid) estos se conservan tal cual en:
+      * los botones al formulario S3 (reemplazan los valores por defecto)
+      * "Compra online" -> https://www.colmedica.com/Productos/Paginas/Registro.aspx?<utm>&CodigoPlan=NN
+      * los enlaces internos entre paginas (clase .agregar-utm)
+  - Si llega SIN parametros, cada boton usa su URL por defecto:
+      * Compra telefonica / CTA:  S3 + ?plan=1&subplan=06&crm=Planes-Livianos&crm-sub=Planes-Livianos
+      * Cotizar gama premium:     S3 + ?plan=2&subplan=03&crm=Organico&crm-sub=Landing-completos...
+      * Cotizar gama medios:      S3 + ?plan=7&subplan=03&crm=Organico&crm-sub=Landing-completos...
+      * Videobot cotizar:         S3 + ?plan=1&subplan=livianos-videobot&...&utm_source=videobot
+  - El formulario S3 se abre en ventana emergente vertical (550x800), igual que la landing.
+  - Todo esta en un solo lugar en livianos/js/app.js (bloque "UTM / BOTONES") por si hay que cambiarlo.
+
+TRACKING
+  - livianos.html incluye: GTM-T876BXW (pagina), GTM-NNR6JKHM (el del videobot), pixeles de
+    Facebook (948938515221843 y 1022599058648004) y TikTok (D61MQ9RC77U10VTVVP10) — los mismos
+    de la pagina actual. Las internas llevan GTM-T876BXW.
+  - Los clics disparan dataLayer 'eventClick' con el mismo formato del sitio (eventCategory /
+    eventAction / eventLabel). Si sobran contenedores, borrar el bloque correspondiente del <head>.
+
+RECURSOS EXTERNOS (intencionales)
+  - Botones -> https://colmedica.s3.us-east-2.amazonaws.com/index.html (UTM/plan)
+  - Compra online -> https://www.colmedica.com/Productos/Paginas/Registro.aspx (e-commerce actual)
+  - Enlaces del bot a planes que no tienen interna aqui (Domiciliario Vital, Odontologico) -> colmedica.com
+  - Fuente Red Hat Display (Google Fonts)
+
+CACHE: los enlaces a estilos.css y app.js llevan ?v=1. Si editas alguno, sube el numero (v=2, v=3...)
+
+DOS ZIPS
+  - Colmedica-Livianos-FINAL.zip             (COMPLETO, con videos ~250 MB)
+  - Colmedica-Livianos-FINAL-sin-videos.zip  (LIVIANO para correo; sin .mp4)
