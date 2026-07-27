@@ -314,149 +314,37 @@
     window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(update, 180); });
     update();
 
-    // Drag-to-scroll (igual que la landing)
+    // Drag-to-scroll: la clase is-grabbing (que desactiva los clics de los
+    // botones) solo se aplica cuando hay arrastre real, no en un clic simple.
     let isDown = false, startX = 0, startLeft = 0, moved = false;
     track.addEventListener('pointerdown', (e) => {
       if (e.pointerType !== 'mouse') return;
       isDown = true; moved = false;
       startX = e.clientX; startLeft = track.scrollLeft;
-      track.classList.add('is-grabbing');
     });
     window.addEventListener('pointermove', (e) => {
       if (!isDown) return;
       const dx = e.clientX - startX;
-      if (Math.abs(dx) > 4) moved = true;
-      track.scrollLeft = startLeft - dx;
+      if (!moved && Math.abs(dx) > 6) {
+        moved = true;
+        track.classList.add('is-grabbing');
+      }
+      if (moved) track.scrollLeft = startLeft - dx;
     });
     window.addEventListener('pointerup', () => {
       if (!isDown) return;
       isDown = false;
-      track.classList.remove('is-grabbing');
-      if (moved) scrollToCard(getActiveIndex());
+      if (moved) {
+        // quitar la clase tras el click fantasma del arrastre
+        setTimeout(() => track.classList.remove('is-grabbing'), 0);
+        scrollToCard(getActiveIndex());
+      }
     });
   })();
 
-  /* ============================================================
-     MODAL "VER PLAN COMPLETO" (datos de la landing de planes)
-     ============================================================ */
-  const PLANS = {
-    diamante: {
-      gama: 'Planes Diamante', tagline: 'Cobertura superior y asistencia en viajes en el exterior.', price: '428.782',
-      features: [
-        'Red hospitalaria VIP',
-        'Hospitalización en habitación tipo suite',
-        'Médico domiciliario',
-        'Servicio de orientación médica 24/7',
-        '+100 especialidades de acceso directo',
-        '+4.400 profesionales adscritos',
-        'Medicamentos ambulatorios pre y post-hospitalarios',
-        '34 Centros Médicos, de Diagnóstico y Odontológicos propios',
-        '1 Centro médico exclusivo Zafiro en Bogotá',
-        'Asistencia en viajes en el exterior',
-        'Reembolso para copagos y cuotas moderadoras*',
-        'Auxilio diario por hospitalización*',
-        'Auxilio para nueva tecnología en servicios ambulatorios y hospitalarios*',
-        'Reembolso para que elijas libremente dónde y con quién atenderte aunque no haga parte de nuestra guía médica**'
-      ]
-    },
-    zafiro: {
-      gama: 'Planes Zafiro', tagline: 'Coberturas y acceso élite para tu salud.', price: '301.786',
-      features: [
-        'Red hospitalaria VIP',
-        'Hospitalización en habitación individual',
-        'Médico domiciliario',
-        'Servicio de orientación médica 24/7',
-        '+100 especialidades de acceso directo',
-        '+4.400 profesionales adscritos',
-        'Medicamentos ambulatorios pre y post-hospitalarios',
-        '34 Centros Médicos, de Diagnóstico y Odontológicos propios',
-        '1 Centro médico exclusivo Zafiro en Bogotá',
-        'Asistencia en viajes en el exterior',
-        'Reembolso para copagos y cuotas moderadoras*',
-        'Auxilio diario por hospitalización*',
-        'Auxilio para nueva tecnología en servicios ambulatorios y hospitalarios*'
-      ]
-    },
-    rubi: {
-      gama: 'Planes Rubí', tagline: 'Protección y cuidado confiable para los tuyos.', price: '257.664',
-      features: [
-        'Red hospitalaria preferente',
-        'Hospitalización en habitación individual',
-        'Médico domiciliario',
-        'Servicio de orientación médica 24/7',
-        '+100 especialidades de acceso directo',
-        '+4.400 profesionales adscritos',
-        'Medicamentos ambulatorios pre y post-hospitalarios',
-        '33 Centros Médicos, de Diagnóstico y Odontológicos propios'
-      ]
-    },
-    ambar: {
-      gama: 'Ámbar Vital', tagline: 'Incluye acceso a 4 clínicas VIP a nivel nacional.', price: '154.219',
-      features: [
-        'Red hospitalaria preferente + 4 clínicas VIP',
-        'Hospitalización en habitación individual',
-        'Médico domiciliario',
-        'Servicio de orientación médica 24/7',
-        '+100 especialidades de acceso directo',
-        '+4.400 profesionales adscritos',
-        '33 Centros Médicos, de Diagnóstico y Odontológicos propios',
-        'Este plan se comercializa a nivel nacional, excluyendo Bogotá y municipios aledaños a Bogotá.'
-      ]
-    },
-    caobo: {
-      gama: 'Caobo Integral', tagline: 'Cobertura integral con maternidad y alto costo.', price: '129.687',
-      features: [
-        'Red hospitalaria esencial',
-        'Hospitalización en habitación individual',
-        'Médico domiciliario',
-        'Servicio de orientación médica 24/7',
-        'Consultas médicas puerta de entrada a través de los Centros Médicos Colmédica de: Chapinero, Suba, Salitre Capital, Metrópolis, Calle 185, Unicentro de Occidente, Plaza Central y Chía.',
-        'Este plan se comercializa únicamente para usuarios con residencia en Bogotá o Chía.'
-      ]
-    },
-    hospitalarios: {
-      gama: 'Hospitalarios', tagline: 'Protección con coberturas específicas en servicios hospitalarios.', price: '53.122',
-      features: [
-        'Atención de Urgencias que deriven en Hospitalización o Cirugía',
-        'Consultas médicas pre y post - hospitalarias',
-        'Hospitalización en habitación individual',
-        'Cama de acompañante',
-        'Auxiliar de Enfermería',
-        'Traslado en Ambulancia Terrestre',
-        'Servicio de orientación médica 24/7'
-      ]
-    }
-  };
-
-  const modal = document.getElementById('planModal');
-  window.openPlan = function (key) {
-    const p = PLANS[key];
-    if (!p || !modal) return;
-    document.getElementById('modalHead').dataset.gama = key;
-    document.getElementById('modalGama').textContent = p.gama;
-    document.getElementById('modalTagline').textContent = p.tagline;
-    document.getElementById('modalPriceValue').textContent = p.price || '';
-    document.getElementById('modalFeatures').innerHTML = p.features.map(f =>
-      '<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>' + f + '</li>'
-    ).join('');
-    const mfBtn = modal.querySelector('.modal-footer a.btn-primary');
-    if (mfBtn) mfBtn.href = window.colmedicaAfiliacionUrl(key);
-    modal.classList.add('open');
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('no-scroll');
-  };
-  window.closePlan = function () {
-    if (!modal) return;
-    modal.classList.remove('open');
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('no-scroll');
-  };
-  if (modal) modal.addEventListener('click', e => { if (e.target === modal) window.closePlan(); });
+  /* ===== Cerrar modal de video con Escape ===== */
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-      if (modal) window.closePlan();
-      if (pvModal) window.closePlanVideo();
-    }
+    if (e.key === 'Escape' && pvModal) window.closePlanVideo();
   });
 
   /* ============================================================

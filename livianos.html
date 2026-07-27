@@ -70,7 +70,7 @@ fbq('track','PageView');
 <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap" rel="stylesheet">
 
 <!-- El ?v= es la "versión". Cada vez que edites estilos.css, SUBE este número -->
-<link rel="stylesheet" href="livianos/css/estilos.css?v=3">
+<link rel="stylesheet" href="livianos/css/estilos.css?v=4">
 
 <!-- =========== DATOS ESTRUCTURADOS (schema.org / JSON-LD) =========== -->
 <script type="application/ld+json">
@@ -348,7 +348,6 @@ fbq('track','PageView');
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Consultas médicas pre y post - hospitalarias</li>
             </ul>
             <div class="plan-actions">
-              <button class="btn-plan-detail" onclick="openPlan('hospitalarios')">Ver plan completo</button>
               <a href="https://colmedica.s3.us-east-2.amazonaws.com/index.html" class="btn-plan-cotizar" data-s3-gama="hospitalarios">Cotízalo aquí</a>
             </div>
           </article>
@@ -370,7 +369,6 @@ fbq('track','PageView');
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Cobertura de maternidad y enfermedades de alto costo</li>
             </ul>
             <div class="plan-actions">
-              <button class="btn-plan-detail" onclick="openPlan('caobo')">Ver plan completo</button>
               <a href="https://colmedica.s3.us-east-2.amazonaws.com/index.html" class="btn-plan-cotizar" data-s3-gama="caobo">Cotízalo aquí</a>
             </div>
           </article>
@@ -392,7 +390,6 @@ fbq('track','PageView');
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Atención en clínicas VIP en Bogotá, Cali, Medellín y Barranquilla</li>
             </ul>
             <div class="plan-actions">
-              <button class="btn-plan-detail" onclick="openPlan('ambar')">Ver plan completo</button>
               <a href="https://colmedica.s3.us-east-2.amazonaws.com/index.html" class="btn-plan-cotizar" data-s3-gama="ambar">Cotízalo aquí</a>
             </div>
           </article>
@@ -417,7 +414,6 @@ fbq('track','PageView');
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>33 Centros Médicos, de Diagnóstico y Odontológicos propios</li>
             </ul>
             <div class="plan-actions">
-              <button class="btn-plan-detail" onclick="openPlan('rubi')">Ver plan completo</button>
               <a href="https://colmedica.s3.us-east-2.amazonaws.com/index.html" class="btn-plan-cotizar" data-s3-gama="rubi">Cotízalo aquí</a>
             </div>
           </article>
@@ -442,7 +438,6 @@ fbq('track','PageView');
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Auxilio para nueva tecnología en servicios ambulatorios y hospitalarios*</li>
             </ul>
             <div class="plan-actions">
-              <button class="btn-plan-detail" onclick="openPlan('zafiro')">Ver plan completo</button>
               <a href="https://colmedica.s3.us-east-2.amazonaws.com/index.html" class="btn-plan-cotizar" data-s3-gama="zafiro">Cotízalo aquí</a>
             </div>
           </article>
@@ -467,7 +462,6 @@ fbq('track','PageView');
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Auxilio para nueva tecnología en servicios ambulatorios y hospitalarios*</li>
             </ul>
             <div class="plan-actions">
-              <button class="btn-plan-detail" onclick="openPlan('diamante')">Ver plan completo</button>
               <a href="https://colmedica.s3.us-east-2.amazonaws.com/index.html" class="btn-plan-cotizar" data-s3-gama="diamante">Cotízalo aquí</a>
             </div>
           </article>
@@ -605,37 +599,8 @@ fbq('track','PageView');
   </div>
 </div>
 
-<!-- =========== MODAL GAMA (Ver plan completo — igual que la landing) =========== -->
-<div class="modal-overlay" id="planModal" aria-hidden="true">
-  <div class="modal-box" role="dialog" aria-modal="true">
-    <div class="modal-head" id="modalHead">
-      <button class="modal-close" onclick="closePlan()" aria-label="Cerrar">✕</button>
-      <div class="modal-gama" id="modalGama"></div>
-      <div class="modal-tagline" id="modalTagline"></div>
-      <div class="modal-price" id="modalPrice">
-        <span class="modal-price-from">Desde</span>
-        <div class="modal-price-amount">
-          <span class="modal-price-currency">$</span>
-          <span class="modal-price-value" id="modalPriceValue"></span>
-          <span class="modal-price-period">/mes</span>
-        </div>
-      </div>
-    </div>
-    <div class="modal-body">
-      <div class="modal-section-title">¿Qué incluye?</div>
-      <ul id="modalFeatures"></ul>
-    </div>
-    <div class="modal-footer">
-      <a href="https://colmedica.s3.us-east-2.amazonaws.com/index.html" class="btn-primary">
-        Cotízalo aquí
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-    </div>
-  </div>
-</div>
-
 <!-- El ?v= es la "versión". Cada vez que edites app.js, SUBE este número -->
-<script src="livianos/js/app.js?v=3"></script>
+<script src="livianos/js/app.js?v=4"></script>
 
 </body>
 </html>
