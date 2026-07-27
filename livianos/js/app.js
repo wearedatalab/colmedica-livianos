@@ -208,7 +208,8 @@
     document.getElementById('planVideoPrice').textContent = p.price;
     document.getElementById('planVideoDesc').innerHTML = p.desc;
     document.getElementById('planVideoCond').textContent = p.cond;
-    document.getElementById('planVideoBuy').setAttribute('href', p.buy);
+    const pvBuy = document.getElementById('planVideoBuy');
+    if (pvBuy) pvBuy.setAttribute('href', p.buy);
     document.getElementById('planVideoMore').setAttribute('href', p.more);
     pvPlayer.src = p.video;
     pvModal.classList.add('open');
@@ -621,6 +622,18 @@
       }
     });
   })();
+
+  /* ============================================================
+     ACORDEONES (páginas internas): solo uno abierto a la vez
+     ============================================================ */
+  document.querySelectorAll('.acc').forEach(acc => {
+    const items = Array.from(acc.querySelectorAll('details'));
+    items.forEach(d => {
+      d.addEventListener('toggle', () => {
+        if (d.open) items.forEach(o => { if (o !== d) o.open = false; });
+      });
+    });
+  });
 
   /* ============================================================
      BARRA FLOTANTE DE COMPRA (páginas internas de plan)

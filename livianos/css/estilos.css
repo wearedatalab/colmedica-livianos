@@ -2762,3 +2762,26 @@ section.block > .wrap > .reco-grid {
   grid-column: 1 / -1;
   width: 100%;
 }
+
+/* ============================================================
+   AJUSTES v3 (feedback cliente 2026-07-27)
+   ============================================================ */
+
+/* 1. Hero con azul de marca (antes se veia lavado por la foto de fondo) */
+.hero.hero--livianos {
+  background:
+    radial-gradient(1100px 480px at 85% -10%, rgba(0, 159, 227, .35), transparent 60%),
+    linear-gradient(120deg, var(--blue-900) 0%, var(--blue-serenidad) 58%, #0a71c0 100%);
+}
+.hero.hero--livianos::before { display: none; }
+
+/* 2. Vigilado pegado a la esquina del video (como el sitio actual) */
+.vigilado-video { bottom: 12px; left: 10px; }
+
+/* 3. "Ver terminos y condiciones" en blanco dentro de la banda azul */
+section.band-blue .terms-toggle summary { color: #fff; }
+section.band-blue .terms-toggle summary:hover { color: #cfe8ff; }
+section.band-blue .terms-toggle .terms-content,
+section.band-blue .terms-toggle .terms-content p,
+section.band-blue .terms-toggle .terms-content li { color: #eaf6ff; }
+section.band-blue .terms-toggle .terms-content a { color: #8ed8ff; }
