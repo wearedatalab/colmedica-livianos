@@ -70,7 +70,7 @@ fbq('track','PageView');
 <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap" rel="stylesheet">
 
 <!-- El ?v= es la "versión". Cada vez que edites estilos.css, SUBE este número -->
-<link rel="stylesheet" href="livianos/css/estilos.css?v=4">
+<link rel="stylesheet" href="livianos/css/estilos.css?v=5">
 
 <!-- =========== DATOS ESTRUCTURADOS (schema.org / JSON-LD) =========== -->
 <script type="application/ld+json">
@@ -104,6 +104,16 @@ fbq('track','PageView');
         { "@type": "Offer", "name": "Plan Domiciliario Superior", "category": "Medicina prepagada", "price": "51254", "priceCurrency": "COP", "availability": "https://schema.org/InStock", "url": "plan-domiciliario-superior.html", "itemOffered": { "@type": "Service", "name": "Plan Domiciliario Superior", "serviceType": "Medicina prepagada", "provider": { "@id": "#organization" } } },
         { "@type": "Offer", "name": "Plan Oncológico Vida Plus", "category": "Medicina prepagada", "price": "46989", "priceCurrency": "COP", "availability": "https://schema.org/InStock", "url": "plan-oncologico-vida-plus.html", "itemOffered": { "@type": "Service", "name": "Plan Oncológico Vida Plus", "serviceType": "Medicina prepagada", "provider": { "@id": "#organization" } } }
       ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Qué son los planes Livianos de Medicina Prepagada para Todos de Colmédica?", "acceptedAnswer": { "@type": "Answer", "text": "Es una opción de medicina prepagada más económica pensada para proteger a tu familia sin comprometer tu presupuesto. A diferencia de los planes complementarios de las EPS, nuestros planes de medicina prepagada te ofrecen cobertura específica y acceso rápido a servicios de salud." } },
+        { "@type": "Question", "name": "¿Desde cuánto cuesta un plan Livianos de Medicina Prepagada para Todos?", "acceptedAnswer": { "@type": "Answer", "text": "Puedes acceder a nuestros planes desde $46.989 al mes. Tenemos 3 opciones de planes para que elijas la que mejor se adapte a ti y a tu familia." } },
+        { "@type": "Question", "name": "¿En qué se diferencian los planes Livianos de Medicina Prepagada para Todos de los planes complementarios de las EPS?", "acceptedAnswer": { "@type": "Answer", "text": "Los planes complementarios de las EPS dependen de la EPS base. Nuestros planes Livianos son independientes y te dan cobertura específica, atención directa y beneficios como la atención médica en casa o el acceso directo a más de 100 especialidades, además de disfrutar de la comodidad de los Centros Médicos Colmédica." } },
+        { "@type": "Question", "name": "¿Cómo puedo afiliarme a esta medicina prepagada más económica?", "acceptedAnswer": { "@type": "Answer", "text": "Es muy fácil. Puedes afiliarte en pocos minutos haciendo clic en el botón Cotízalo aquí. Afíliate hoy a un plan Liviano y garantiza para tu familia protección y cuidado con opciones de medicina prepagada más económica." } }
+      ]
     }
   ]
 }
@@ -130,7 +140,7 @@ fbq('track','PageView');
     <nav class="main-nav">
       <a href="#planes">Planes Livianos</a>
       <a href="#beneficios">Más beneficios</a>
-      <a href="#tu-plan-ideal">Tu plan ideal</a>
+      <a href="#dudas">¿Dudas?</a>
     </nav>
 
     <div class="header-actions">
@@ -146,7 +156,7 @@ fbq('track','PageView');
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <a href="#planes" onclick="closeMobile()">Planes Livianos</a>
   <a href="#beneficios" onclick="closeMobile()">Más beneficios</a>
-  <a href="#tu-plan-ideal" onclick="closeMobile()">Tu plan ideal</a>
+  <a href="#dudas" onclick="closeMobile()">¿Dudas?</a>
 </div>
 
 <main id="contenido">
@@ -156,6 +166,7 @@ fbq('track','PageView');
   <div class="wrap hero-wrap">
     <div class="hero-grid">
       <div class="hero-copy">
+        <img src="livianos/fotos/badge-planes-livianos.png" alt="Planes Livianos: Medicina Prepagada para Todos" class="hero-badge">
         <h1>Planes <em>Livianos</em> Colmédica</h1>
         <p class="hero-sub">Proteger a tu familia sin comprometer tu presupuesto es posible con nuestros planes de medicina prepagada, una opción más económica y asequible para el bienestar de todos.</p>
         <div class="hero-ctas">
@@ -181,25 +192,6 @@ fbq('track','PageView');
       </div>
     </div>
 
-    <!-- Beneficios (misma estructura de la página actual) -->
-    <div class="hero-benefits" role="list">
-      <div class="hero-stat" role="listitem">
-        <span class="hero-stat-icon"><img src="livianos/fotos/usuarios.svg" alt=""></span>
-        <div class="hero-stat-text"><div class="hero-stat-label">Sin límite de edad</div></div>
-      </div>
-      <div class="hero-stat" role="listitem">
-        <span class="hero-stat-icon"><img src="livianos/fotos/tarjeta.svg" alt=""></span>
-        <div class="hero-stat-text"><div class="hero-stat-label">Sin cuota de inscripción</div></div>
-      </div>
-      <div class="hero-stat" role="listitem">
-        <span class="hero-stat-icon"><img src="livianos/fotos/hoja.svg" alt=""></span>
-        <div class="hero-stat-text"><div class="hero-stat-label">Sin examen médico de ingreso</div></div>
-      </div>
-      <div class="hero-stat" role="listitem">
-        <span class="hero-stat-icon"><img src="livianos/fotos/calendario.svg" alt=""></span>
-        <div class="hero-stat-text"><div class="hero-stat-label">Acceso desde el 1° día de vigencia*</div></div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -212,7 +204,8 @@ fbq('track','PageView');
         <h2 class="section-title">Elige el plan <em>ideal para ti</em></h2>
       </div>
       <div class="seo-card seo-card--no-icon">
-        <p>Coberturas específicas con tarifas accesibles: consultas ambulatorias, atención médica en casa y protección oncológica. Reproduce el video de cada plan o conoce todos sus detalles.</p>
+        <p>Coberturas específicas con tarifas accesibles: consultas ambulatorias, atención médica en casa y protección oncológica.</p>
+        <p style="margin-top:.6rem">Reproduce el video de cada plan o conoce todos sus detalles.</p>
       </div>
     </div>
 
@@ -231,7 +224,7 @@ fbq('track','PageView');
             <p class="lplan-price"><span class="lplan-price-from">Desde</span>$62.432<sup><a href="#livianos-terms" data-open-terms>(1)</a></sup></p>
             <ul class="lplan-features">
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Acceso directo a más de 100 especialidades</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Odontología preventiva</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Exámenes de diagnóstico</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Sin límite de edad ni examen de ingreso</li>
             </ul>
             <div class="lplan-actions">
@@ -252,7 +245,7 @@ fbq('track','PageView');
             <a href="plan-domiciliario-superior.html" class="agregar-utm"><h3>Plan Domiciliario Superior</h3></a>
             <p class="lplan-price"><span class="lplan-price-from">Desde</span>$51.254<sup><a href="#livianos-terms" data-open-terms>(2)</a></sup></p>
             <ul class="lplan-features">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Consulta domiciliaria médica general ilimitada 24/7</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Consulta en casa con médico general 24/7</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Consultas médicas presenciales y por videollamada</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Traslado en ambulancia terrestre</li>
             </ul>
@@ -291,12 +284,10 @@ fbq('track','PageView');
         <summary>Ver términos y condiciones</summary>
         <div class="terms-content">
           <ol class="terms-list">
-            <li>Valor mensual 2026 con IVA para una persona de 3 a 17 años, plan <strong>Esmeralda Ambulatorio</strong>. Aplican condiciones contractuales.</li>
-            <li>Tarifa mensual IVA incluido, plan <strong>Domiciliario Superior</strong>. Aplican condiciones. No aplica para contratos ya existentes.</li>
-            <li>Valor mensual 2026 con IVA para una persona de 15 a 18 años en un contrato familiar, plan <strong>Oncológico Vida Plus</strong>. Aplican condiciones contractuales.</li>
+            <li>Tarifa mensual 2026 IVA incluido, para una persona de 3 a 17 años en contrato familiar, plan <strong>Esmeralda Ambulatorio</strong>.</li>
+            <li>Tarifa mensual 2026 IVA incluido, plan <strong>Domiciliario Superior</strong>. Aplica para contratos nuevos familiares e individuales. No aplica para inclusiones a contratos ya existentes. Válida hasta el 31 de diciembre de 2026.</li>
+            <li>Tarifa mensual 2026 IVA incluido, para una persona de 15 a 18 años en contrato familiar, plan <strong>Oncológico Vida Plus</strong>.</li>
           </ol>
-          <p>*Aplican condiciones de acuerdo al plan contratado.</p>
-          <p>*Tarifa mensual 2026 IVA incluido, para una persona de 15 a 18 años en contrato familiar. Aplican condiciones contractuales.</p>
         </div>
       </details>
     </div>
@@ -339,7 +330,7 @@ fbq('track','PageView');
               <span class="plan-price-from">Desde</span>
               <div class="plan-price-amount">
                 <span class="plan-price-currency">$</span>
-                <span class="plan-price-value">53.122</span><sup class="plan-price-ref"><a href="#planes-terms" data-open-terms>(1)</a></sup>
+                <span class="plan-price-value">53.122</span><sup class="plan-price-ref"><a href="#planes-terms" data-open-terms>(4)</a></sup>
                 <span class="plan-price-period">/mes</span>
               </div>
             </div>
@@ -360,7 +351,7 @@ fbq('track','PageView');
               <span class="plan-price-from">Desde</span>
               <div class="plan-price-amount">
                 <span class="plan-price-currency">$</span>
-                <span class="plan-price-value">129.687</span><sup class="plan-price-ref"><a href="#planes-terms" data-open-terms>(2)</a></sup>
+                <span class="plan-price-value">129.687</span><sup class="plan-price-ref"><a href="#planes-terms" data-open-terms>(5)</a></sup>
                 <span class="plan-price-period">/mes</span>
               </div>
             </div>
@@ -381,7 +372,7 @@ fbq('track','PageView');
               <span class="plan-price-from">Desde</span>
               <div class="plan-price-amount">
                 <span class="plan-price-currency">$</span>
-                <span class="plan-price-value">154.219</span><sup class="plan-price-ref"><a href="#planes-terms" data-open-terms>(3)</a></sup>
+                <span class="plan-price-value">154.219</span><sup class="plan-price-ref"><a href="#planes-terms" data-open-terms>(6)</a></sup>
                 <span class="plan-price-period">/mes</span>
               </div>
             </div>
@@ -402,7 +393,7 @@ fbq('track','PageView');
               <span class="plan-price-from">Desde</span>
               <div class="plan-price-amount">
                 <span class="plan-price-currency">$</span>
-                <span class="plan-price-value">257.664</span><sup class="plan-price-ref"><a href="#planes-terms" data-open-terms>(4)</a></sup>
+                <span class="plan-price-value">257.664</span><sup class="plan-price-ref"><a href="#planes-terms" data-open-terms>(7)</a></sup>
                 <span class="plan-price-period">/mes</span>
               </div>
             </div>
@@ -411,7 +402,7 @@ fbq('track','PageView');
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>+100 especialidades de acceso directo</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>+4.400 profesionales adscritos</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Medicamentos ambulatorios pre y post-hospitalarios</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>33 Centros Médicos, de Diagnóstico y Odontológicos propios</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>34 Centros Médicos, de Diagnóstico y Odontológicos propios</li>
             </ul>
             <div class="plan-actions">
               <a href="https://colmedica.s3.us-east-2.amazonaws.com/index.html" class="btn-plan-cotizar" data-s3-gama="rubi">Cotízalo aquí</a>
@@ -426,7 +417,7 @@ fbq('track','PageView');
               <span class="plan-price-from">Desde</span>
               <div class="plan-price-amount">
                 <span class="plan-price-currency">$</span>
-                <span class="plan-price-value">301.786</span><sup class="plan-price-ref"><a href="#planes-terms" data-open-terms>(5)</a></sup>
+                <span class="plan-price-value">301.786</span><sup class="plan-price-ref"><a href="#planes-terms" data-open-terms>(8)</a></sup>
                 <span class="plan-price-period">/mes</span>
               </div>
             </div>
@@ -450,7 +441,7 @@ fbq('track','PageView');
               <span class="plan-price-from">Desde</span>
               <div class="plan-price-amount">
                 <span class="plan-price-currency">$</span>
-                <span class="plan-price-value">428.782</span><sup class="plan-price-ref"><a href="#planes-terms" data-open-terms>(6)</a></sup>
+                <span class="plan-price-value">428.782</span><sup class="plan-price-ref"><a href="#planes-terms" data-open-terms>(9)</a></sup>
                 <span class="plan-price-period">/mes</span>
               </div>
             </div>
@@ -477,7 +468,7 @@ fbq('track','PageView');
       <details class="terms-toggle" id="planes-terms">
         <summary>Ver términos y condiciones</summary>
         <div class="terms-content">
-          <ol class="terms-list">
+          <ol class="terms-list" start="4">
             <li>Tarifa mensual 2026 IVA incluido, para una persona de 5 a 14 años en contrato familiar, plan <strong>Hospitalario Rubí</strong> para la alternativa que tiene un límite máximo total anual de cobertura de 50 SMLMV.</li>
             <li>Tarifa mensual 2026 IVA incluido, para una persona de 5 a 14 años en contrato familiar, plan <strong>Caobo Integral</strong>. Venta para personas con residencia en Bogotá o Chía.</li>
             <li>Tarifa mensual 2026 IVA incluido, para una persona de 5 a 14 años en contrato familiar, plan <strong>Ámbar Vital</strong>. Venta para personas con residencia a nivel nacional, excluyendo Bogotá y municipios aledaños a Bogotá.</li>
@@ -502,8 +493,13 @@ fbq('track','PageView');
   </div>
 </section>
 
+<!-- ============================================================
+     SECCIÓN "TU PLAN IDEAL" (VIDEOBOT) — OCULTA POR AHORA
+     (definido por el cliente: había 6 planes y ahora solo hay 3).
+     Para reactivarla: quitar el atributo hidden de la <section>.
+     ============================================================ -->
 <!-- =========== 3. VIDEOBOT — ¡Conoce el plan que más se ajusta a tus necesidades! =========== -->
-<section class="block band-soft" id="tu-plan-ideal">
+<section class="block band-soft" id="tu-plan-ideal" hidden>
   <div class="wrap">
     <div class="col-aside">
       <div class="section-header">
@@ -511,7 +507,7 @@ fbq('track','PageView');
         <h2 class="section-title">¡Conoce el plan que más se ajusta a tus <em>necesidades!</em></h2>
       </div>
       <div class="seo-card seo-card--no-icon">
-        <p>Responde unas preguntas rápidas en video y te recomendamos el plan liviano perfecto para ti.</p>
+        <p>Haz clic en el video interactivo, responde unas preguntas rápidas ¡y listo! Te mostramos el plan de salud ideal para ti.</p>
       </div>
     </div>
 
@@ -521,19 +517,51 @@ fbq('track','PageView');
   </div>
 </section>
 
-<!-- =========== 4. MEDICINA PREPAGADA ACCESIBLE (texto SEO) =========== -->
-<section class="block band-blue-medium" id="accesible">
+<!-- =========== 4. ¿DUDAS? — Preguntas frecuentes (SEO: medicina prepagada para todos) =========== -->
+<section class="block band-blue-medium" id="dudas">
   <div class="wrap">
-    <div class="seo-block">
-      <h2>Medicina prepagada <em>accesible</em> para todos.</h2>
-      <p>Proteger a tu familia sin comprometer tu presupuesto es posible con nuestros planes de medicina prepagada, una opción más <strong>barata y asequible</strong> para el bienestar de todos. A diferencia de los <strong>planes complementarios</strong> de las EPS, nuestros planes ofrecen cobertura específica <strong>desde $42.524*</strong> al mes y se pueden adquirir 100% online, sin exámenes médicos de ingreso, sin cuota de inscripción ni límite de edad, según el plan.</p>
-      <p>Afíliate a un plan y garantiza para tu familia protección y cuidado con opciones de medicina prepagada económica.</p>
-      <p>¿Qué esperas? <strong>¡Afíliate hoy a Colmédica!</strong></p>
-      <div class="hero-ctas" style="justify-content:center; margin-top:1.6rem">
+    <div class="col-aside">
+      <div class="section-header">
+        <span class="section-tag"><span class="section-tag-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></svg></span>Preguntas frecuentes</span>
+        <h2 class="section-title">Resolvemos tus <em>dudas</em></h2>
+      </div>
+      <div class="seo-card seo-card--no-icon">
+        <p>Conoce más sobre los planes Livianos: medicina prepagada para todos, una opción más económica para proteger a tu familia.</p>
+      </div>
+      <div class="section-cta">
         <a href="https://colmedica.s3.us-east-2.amazonaws.com/index.html" class="btn-primary" data-s3="livianos">
           Cotízalo aquí
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
+      </div>
+    </div>
+
+    <div class="col-body">
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>¿Qué son los planes Livianos de Medicina Prepagada para Todos de Colmédica?</summary>
+          <div class="faq-body">
+            <p>Es una opción de medicina prepagada más económica pensada para proteger a tu familia sin comprometer tu presupuesto. A diferencia de los planes complementarios de las EPS, nuestros planes de medicina prepagada te ofrecen cobertura específica y acceso rápido a servicios de salud.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>¿Desde cuánto cuesta un plan Livianos de Medicina Prepagada para Todos?</summary>
+          <div class="faq-body">
+            <p>Puedes acceder a nuestros planes desde $46.989<sup><a href="#livianos-terms" data-open-terms>(3)</a></sup> al mes. Tenemos 3 opciones de planes para que elijas la que mejor se adapte a ti y a tu familia.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>¿En qué se diferencian los planes Livianos de Medicina Prepagada para Todos de los planes complementarios de las EPS?</summary>
+          <div class="faq-body">
+            <p>Los planes complementarios de las EPS dependen de la EPS base. Nuestros planes Livianos son independientes y te dan cobertura específica, atención directa y beneficios como la atención médica en casa o el acceso directo a más de 100 especialidades, además de disfrutar de la comodidad de los Centros Médicos Colmédica.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>¿Cómo puedo afiliarme a esta medicina prepagada más económica?</summary>
+          <div class="faq-body">
+            <p>Es muy fácil. Puedes afiliarte en pocos minutos haciendo clic en el botón que dice Cotízalo aquí. Afíliate hoy a un plan Liviano y garantiza para tu familia protección y cuidado con opciones de medicina prepagada más económica.</p>
+          </div>
+        </details>
       </div>
     </div>
   </div>
@@ -541,8 +569,8 @@ fbq('track','PageView');
 
 <!-- Legales -->
 <div class="legales">
-  <p>*Aplican condiciones de acuerdo al plan contratado.</p>
-  <p>*Tarifa mensual 2026 IVA incluido, para una persona de 15 a 18 años en contrato familiar. Aplican condiciones contractuales.</p>
+  <p>Aplican condiciones de acuerdo con el plan contratado.</p>
+  <p>Los Centros Médicos Colmédica son operados por UMD.</p>
 </div>
 
 </main>
@@ -600,7 +628,7 @@ fbq('track','PageView');
 </div>
 
 <!-- El ?v= es la "versión". Cada vez que edites app.js, SUBE este número -->
-<script src="livianos/js/app.js?v=4"></script>
+<script src="livianos/js/app.js?v=5"></script>
 
 </body>
 </html>

@@ -2785,3 +2785,59 @@ section.band-blue .terms-toggle .terms-content,
 section.band-blue .terms-toggle .terms-content p,
 section.band-blue .terms-toggle .terms-content li { color: #eaf6ff; }
 section.band-blue .terms-toggle .terms-content a { color: #8ed8ff; }
+
+/* ============================================================
+   AJUSTES v5 (feedback cliente "new ecommerce")
+   Look & feel AZUL CLARO — tomado del azul del video de
+   bienvenida (Planes Livianos · Medicina Prepagada para Todos)
+   ============================================================ */
+
+/* Hero azul claro */
+.hero.hero--livianos {
+  background:
+    radial-gradient(900px 460px at 88% -10%, rgba(255, 255, 255, .18), transparent 60%),
+    linear-gradient(120deg, #0479B1 0%, #0794C8 55%, #17ABDC 100%);
+}
+.hero--livianos h1 { color: #fff; }
+.hero--livianos h1 em { color: #003e73; }
+.hero--livianos .hero-sub { color: #f0faff; }
+
+/* Badge "Planes Livianos — Medicina Prepagada para Todos" (entre el logo y el título) */
+.hero-badge {
+  width: min(320px, 78%);
+  border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(0, 40, 90, .22);
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+/* Banda azul (Más beneficios) en azul claro */
+section.block.band-blue {
+  background: linear-gradient(160deg, #0479B1 0%, #0794C8 58%, #12A5D6 100%);
+}
+section.block.band-blue .section-title em { color: #003e73; }
+
+/* "El azul sobre azul no se lee": nombres de plan en blanco dentro de los T&C */
+section.band-blue .terms-toggle .terms-content strong { color: #fff; }
+
+/* Hero de las páginas internas en azul claro */
+.iplan-hero {
+  background:
+    radial-gradient(1100px 480px at 85% -10%, rgba(255, 255, 255, .16), transparent 60%),
+    linear-gradient(120deg, #0479B1 0%, #0794C8 58%, #17ABDC 100%);
+}
+.iplan-price { color: #fff; }
+.iplan-price .iplan-price-from { color: #eaf9ff; }
+.iplan-price sup a { color: #eaf9ff; font-size: .62em; font-weight: 700; text-decoration: underline; }
+.iplan-bullets li svg { color: #fff; }
+.iplan-breadcrumb { color: #e2f4fd; }
+.iplan-breadcrumb a { color: #ffffff; }
+
+/* Sección ¿Dudas? (FAQ) */
+#dudas .faq-list { max-width: none; }
+#dudas .section-cta { margin-top: 1.2rem; }
+#dudas .section-cta .btn-primary { display: inline-flex; }
+section[hidden] { display: none !important; }
+
+/* Numeración continua de notas: livianos (1)-(3), gamas (4)-(9) */
+#planes-terms .terms-list { counter-reset: term 3; }

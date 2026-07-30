@@ -16,6 +16,11 @@ CONTENIDO
 DESPLIEGUE: sube los 4 .html + la carpeta livianos/ a la raiz del sitio (conserva subcarpetas).
   Rutas relativas -> funciona en cualquier dominio sin editar nada.
 
+NOTA (ajustes "new ecommerce"): el look & feel es AZUL CLARO (el azul del video de
+bienvenida). La seccion del videobot "Tu plan ideal" esta OCULTA por ahora (atributo
+hidden en la <section id="tu-plan-ideal"> de livianos.html); para reactivarla basta
+quitar ese atributo. La antigua seccion SEO ahora es "Resolvemos tus dudas" (FAQ).
+
 LO QUE PIDIO EL CLIENTE (video de WhatsApp)
   1. VIGILADO: todos los videos llevan el sello "Vigilado Supersalud" superpuesto por HTML/CSS
      (clase .vigilado-video). Ya no depende de editar los videos. Esta en: video principal,
