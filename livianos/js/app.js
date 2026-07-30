@@ -39,6 +39,21 @@
     mobileMenu.setAttribute('aria-hidden', 'true');
   };
 
+  /* ============================================================
+     SEO — canonical y og:url portables
+     Si la página se publica en un dominio distinto al escrito en el
+     <head>, aquí se corrigen solos para que apunten a la URL real.
+     (Si ya editaste el dominio en el HTML, esto no cambia nada.)
+     ============================================================ */
+  (function () {
+    if (location.protocol === 'file:') return;
+    const real = location.origin + location.pathname;
+    const canon = document.querySelector('link[rel="canonical"]');
+    if (canon && canon.href !== real) canon.href = real;
+    const og = document.querySelector('meta[property="og:url"]');
+    if (og && og.getAttribute('content') !== real) og.setAttribute('content', real);
+  })();
+
   /* ===== Tag Manager (mismo evento eventClick del sitio actual) ===== */
   window.dataLayer = window.dataLayer || [];
   function clicTag(eventCategory, eventAction, eventLabel) {

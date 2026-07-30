@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CO">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Plan Domiciliario Superior | Colmédica Medicina Prepagada</title>
-<meta name="description" content="Plan Domiciliario Superior de Colmédica: consulta médica domiciliaria ilimitada 24/7, consultas presenciales y por videollamada, y traslado en ambulancia. Desde $51.254 al mes." />
+<meta name="description" content="Plan Domiciliario Superior de Colmédica desde $51.254 al mes: consulta en casa con médico general 24/7, telemedicina y traslado en ambulancia terrestre." />
 <meta name="author" content="Colmédica Medicina Prepagada" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="theme-color" content="#0058A2" />
@@ -17,12 +17,31 @@
 <link rel="icon" type="image/png" sizes="16x16" href="livianos/fotos/favicon-16.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="livianos/fotos/apple-touch-icon.png" />
 
+<!-- ============================================================
+     SEO — DOMINIO FINAL
+     Cambia https://www.colmedica.com por el dominio donde publiques la pagina
+     (en canonical y en og:url). Si no lo cambias, el script de
+     livianos/js/app.js lo ajusta solo al dominio real.
+     ============================================================ -->
+<link rel="canonical" href="https://www.colmedica.com/plan-domiciliario-superior.html" />
+<meta property="og:url" content="https://www.colmedica.com/plan-domiciliario-superior.html" />
+
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Colmédica Medicina Prepagada" />
 <meta property="og:title" content="Plan Domiciliario Superior | Colmédica Medicina Prepagada" />
-<meta property="og:description" content="Plan Domiciliario Superior de Colmédica: consulta médica domiciliaria ilimitada 24/7, consultas presenciales y por videollamada, y traslado en ambulancia. Desde $51.254 al mes." />
-<meta property="og:image" content="livianos/fotos/DomiciliarioSuperiorHome.png" />
+<meta property="og:description" content="Plan Domiciliario Superior de Colmédica desde $51.254 al mes: consulta en casa con médico general 24/7, telemedicina y traslado en ambulancia terrestre." />
+<meta property="og:image" content="https://www.colmedica.com/livianos/fotos/og-image.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Planes Livianos Colmédica — Medicina Prepagada para Todos" />
+<!-- Twitter / X Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Plan Domiciliario Superior | Colmédica Medicina Prepagada" />
+<meta name="twitter:description" content="Plan Domiciliario Superior de Colmédica desde $51.254 al mes: consulta en casa con médico general 24/7, telemedicina y traslado en ambulancia terrestre." />
+<meta name="twitter:image" content="https://www.colmedica.com/livianos/fotos/og-image.jpg" />
+<meta name="twitter:image:alt" content="Planes Livianos Colmédica — Medicina Prepagada para Todos" />
 <meta property="og:locale" content="es_CO" />
 
 <!-- Google Tag Manager (página) -->
@@ -38,17 +57,135 @@ j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefo
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="livianos/css/estilos.css?v=5">
+<link rel="stylesheet" href="livianos/css/estilos.css?v=7">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Offer",
-  "name": "Plan Domiciliario Superior",
-  "category": "Medicina prepagada",
-  "priceCurrency": "COP",
-  "availability": "https://schema.org/InStock",
-  "offeredBy": { "@type": "MedicalOrganization", "name": "Colmédica Medicina Prepagada", "url": "https://www.colmedica.com" }
+  "@graph": [
+    {
+      "@type": [
+        "MedicalOrganization",
+        "Organization"
+      ],
+      "@id": "https://www.colmedica.com/#organization",
+      "name": "Colmédica Medicina Prepagada",
+      "alternateName": "Colmédica",
+      "url": "https://www.colmedica.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.colmedica.com/livianos/fotos/colmedica-logo-white.png",
+        "width": 195,
+        "height": 55
+      },
+      "image": "https://www.colmedica.com/livianos/fotos/og-image.jpg",
+      "slogan": "En Colmédica te queremos bien",
+      "description": "Colmédica es una compañía de medicina prepagada en Colombia. Sus planes Livianos ofrecen coberturas específicas con tarifas accesibles: consultas ambulatorias, atención médica en casa y protección oncológica.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Colombia"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "CO"
+      },
+      "sameAs": [
+        "https://www.facebook.com/Colmedica",
+        "https://www.instagram.com/colmedica",
+        "https://www.linkedin.com/company/colmedica",
+        "https://www.youtube.com/user/Colmedica"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.colmedica.com/#website",
+      "url": "https://www.colmedica.com/",
+      "name": "Planes Livianos Colmédica",
+      "inLanguage": "es-CO",
+      "publisher": {
+        "@id": "https://www.colmedica.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.colmedica.com/plan-domiciliario-superior.html#webpage",
+      "url": "https://www.colmedica.com/plan-domiciliario-superior.html",
+      "name": "Plan Domiciliario Superior | Colmédica Medicina Prepagada",
+      "description": "Plan Domiciliario Superior de Colmédica desde $51.254 al mes: consulta en casa con médico general 24/7, telemedicina y traslado en ambulancia terrestre.",
+      "isPartOf": {
+        "@id": "https://www.colmedica.com/#website"
+      },
+      "about": {
+        "@id": "https://www.colmedica.com/plan-domiciliario-superior.html#servicio"
+      },
+      "primaryImageOfPage": "https://www.colmedica.com/livianos/fotos/DomiciliarioSuperiorHome.png",
+      "inLanguage": "es-CO",
+      "breadcrumb": {
+        "@id": "https://www.colmedica.com/plan-domiciliario-superior.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.colmedica.com/plan-domiciliario-superior.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.colmedica.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Planes Livianos",
+          "item": "https://www.colmedica.com/livianos.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Plan Domiciliario Superior",
+          "item": "https://www.colmedica.com/plan-domiciliario-superior.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.colmedica.com/plan-domiciliario-superior.html#servicio",
+      "name": "Plan Domiciliario Superior",
+      "serviceType": "Medicina prepagada",
+      "description": "Plan de medicina prepagada para recibir atención médica en casa: consulta con médico general 24/7, consultas presenciales y por videollamada, terapias domiciliarias y traslado en ambulancia.",
+      "provider": {
+        "@id": "https://www.colmedica.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Colombia"
+      },
+      "image": "https://www.colmedica.com/livianos/fotos/DomiciliarioSuperiorHome.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "51254",
+        "priceCurrency": "COP",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.colmedica.com/plan-domiciliario-superior.html",
+        "category": "Medicina prepagada"
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Plan Domiciliario Superior de Colmédica",
+      "description": "Conoce las coberturas del Plan Domiciliario Superior de medicina prepagada de Colmédica.",
+      "thumbnailUrl": "https://www.colmedica.com/livianos/fotos/DomiciliarioSuperiorHome.png",
+      "contentUrl": "https://www.colmedica.com/livianos/videos/DomiciliarioSuperior.mp4",
+      "uploadDate": "2026-07-01",
+      "duration": "PT48S",
+      "publisher": {
+        "@id": "https://www.colmedica.com/#organization"
+      },
+      "inLanguage": "es-CO"
+    }
+  ]
 }
 </script>
 </head>
@@ -64,7 +201,7 @@ j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefo
 <header class="site-header" id="siteHeader">
   <div class="wrap header-inner">
     <a href="livianos.html" class="logo-link agregar-utm" aria-label="Colmédica inicio">
-      <img src="livianos/fotos/colmedica-logo-white.png" alt="Colmédica" class="brand-logo">
+      <img src="livianos/fotos/colmedica-logo-white.png" alt="Colmédica" class="brand-logo" width="195" height="55" loading="eager" fetchpriority="high" decoding="async">
     </a>
 
     <nav class="main-nav">
@@ -123,7 +260,7 @@ j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefo
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
           </span>
         </button>
-        <span class="vigilado-video"><img src="livianos/fotos/logo-SuperSalud-Res-white.png" alt="Vigilado Supersalud"></span>
+        <span class="vigilado-video"><img src="livianos/fotos/logo-SuperSalud-Res-white.png" alt="Vigilado Supersalud" width="366" height="44" loading="eager" fetchpriority="high" decoding="async"></span>
       </div>
     </div>
   </div>
@@ -145,11 +282,11 @@ j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefo
     <div class="col-body">
       <div class="acc">
         <details open>
-          <summary><img src="livianos/fotos/Libro.svg" alt=""> Detalles del plan <span class="acc-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+          <summary><img src="livianos/fotos/Libro.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"> Detalles del plan <span class="acc-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
           <div class="acc-body"><p>El plan Domiciliario Superior está diseñado para que puedas recibir atención médica en la comodidad de tu hogar o en cualquier lugar en el que te encuentres, teniendo en cuenta las ciudades de cobertura. Este plan te brinda acceso a las principales y más solicitadas especialidades, así como a medicina general y terapias.</p></div>
         </details>
         <details>
-          <summary><img src="livianos/fotos/Ubi.svg" alt=""> Ventas a personas con residencia en <span class="acc-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+          <summary><img src="livianos/fotos/Ubi.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"> Ventas a personas con residencia en <span class="acc-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
           <div class="acc-body"><table><thead><tr><th scope="col">Departamento</th><th scope="col">Ciudad</th></tr></thead><tbody>
               <tr><td>D.c.</td><td>Bogota</td></tr>
               <tr><td>Atlantico</td><td>Barranquilla</td></tr>
@@ -177,11 +314,11 @@ j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefo
             </tbody></table></div>
         </details>
         <details>
-          <summary><img src="livianos/fotos/Enfer.svg" alt=""> Beneficios del plan <span class="acc-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+          <summary><img src="livianos/fotos/Enfer.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"> Beneficios del plan <span class="acc-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
           <div class="acc-body"><ul><li>Sin importar tu edad aprovecha el beneficio de Tarifa única.</li><li>Puedes recibir orientación médica ilimitada por llamada o videollamada 24/7.</li><li>Tarifas preferenciales en los Centros Médicos Colmédica para los servicios médicos derivados no cubiertos por el plan.</li><li>Gestiona tu plan 100% en línea mediante la App Colmédica, de forma sencilla y rápida.</li></ul></div>
         </details>
         <details>
-          <summary><img src="livianos/fotos/Doc.svg" alt=""> Coberturas incluidas en el plan <span class="acc-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+          <summary><img src="livianos/fotos/Doc.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"> Coberturas incluidas en el plan <span class="acc-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
           <div class="acc-body"><ul><li>La consulta con médico general incluye oximetría y glucometría.</li><li>Consultas Médicas Presenciales y por Telemedicina: comprende especialidades como cardiología, dermatología, endocrinología, gastroenterología, ginecología, medicina familiar, medicina interna, neumología, ortopedia y traumatología, otorrinolaringología, pediatría, psicología, reumatología y urología.</li><li>Terapia Física (fisioterapia) y Respiratoria Domiciliaria.</li><li>Atención de Urgencias Odontológicas en Consultorio: únicamente con odontólogo general, por dolor o trauma.</li><li>Traslado en Ambulancia Terrestre: dentro del perímetro urbano de las ciudades y en municipios con cobertura.</li></ul><p>Aplican condiciones contractuales.</p><p>La celebración de contratos de medicina prepagada requiere afiliación al Sistema General de Seguridad Social en Salud y continuidad en el pago de las cotizaciones.</p></div>
         </details>
       </div>
@@ -204,10 +341,10 @@ j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefo
     <div class="footer-grid">
       <div class="footer-logos">
         <span class="footer-logo-main" aria-label="Colmédica">
-          <img src="livianos/fotos/colmedica-logo-white.png" alt="Colmédica" class="brand-logo-footer">
+          <img src="livianos/fotos/colmedica-logo-white.png" alt="Colmédica" class="brand-logo-footer" width="195" height="55" loading="eager" fetchpriority="high" decoding="async">
         </span>
-        <a href="https://www.supersalud.gov.co/" target="_blank" class="footer-supersalud" aria-label="Vigilado Supersalud">
-          <img src="livianos/fotos/supersalud.png" alt="Vigilado Supersalud">
+        <a href="https://www.supersalud.gov.co/" target="_blank" rel="noopener" class="footer-supersalud" aria-label="Vigilado Supersalud">
+          <img src="livianos/fotos/supersalud.png" alt="Vigilado Supersalud" width="366" height="44" loading="lazy" decoding="async">
         </a>
       </div>
 
@@ -218,7 +355,7 @@ j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefo
           <a href="https://portalmig.colmedica.com/Paginas/Proteccion-datos.aspx" target="_blank" rel="noopener">Política de tratamiento de Datos Personales de Colmédica</a><br>
           <a href="https://portalmig.colmedica.com/Productos/Paginas/terminos-y-condiciones.aspx" target="_blank" rel="noopener">Términos y Condiciones del Sitio</a>
         </div>
-        <img src="livianos/fotos/logo-payzen.svg" alt="Payzen" class="footer-payzen">
+        <img src="livianos/fotos/logo-payzen.svg" alt="Payzen" class="footer-payzen" loading="lazy" decoding="async">
       </div>
     </div>
 
@@ -233,14 +370,14 @@ j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefo
 <div class="floatbar" id="floatbar">
   <div class="wrap floatbar-inner">
     <div class="floatbar-info">
-      <h2>Plan Domiciliario Superior</h2>
+      <p class="floatbar-title">Plan Domiciliario Superior</p>
       <span class="floatbar-price">Desde $51.254(2)</span>
     </div>
     <button class="btn-tel" type="button" data-s3="livianos">Habla con un asesor</button>
   </div>
 </div>
 
-<script src="livianos/js/app.js?v=5"></script>
+<script src="livianos/js/app.js?v=6"></script>
 
 <!-- Video del plan: play con overlay -->
 <script>

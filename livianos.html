@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CO">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Planes Livianos Colmédica | Medicina Prepagada Accesible</title>
-<meta name="description" content="Complementa tu atención médica con los planes livianos de Colmédica: Esmeralda Ambulatorio, Domiciliario Superior y Oncológico Vida Plus. Medicina prepagada accesible, 100% online, sin cuota de inscripción ni examen médico de ingreso." />
+<title>Planes Livianos Colmédica | Medicina Prepagada para Todos</title>
+<meta name="description" content="Planes Livianos de Colmédica: medicina prepagada desde $46.989 al mes. Esmeralda Ambulatorio, Domiciliario Superior y Oncológico Vida Plus, 100% en línea." />
 <meta name="keywords" content="planes livianos, Colmédica, medicina prepagada, Esmeralda Ambulatorio, Domiciliario Superior, Oncológico Vida Plus, medicina prepagada económica, salud Colombia" />
 <meta name="author" content="Colmédica Medicina Prepagada" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -19,12 +19,31 @@
 <link rel="icon" type="image/png" sizes="16x16" href="livianos/fotos/favicon-16.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="livianos/fotos/apple-touch-icon.png" />
 
+<!-- ============================================================
+     SEO — DOMINIO FINAL
+     Cambia https://www.colmedica.com por el dominio donde publiques la pagina
+     (en canonical y en og:url). Si no lo cambias, el script de
+     livianos/js/app.js lo ajusta solo al dominio real.
+     ============================================================ -->
+<link rel="canonical" href="https://www.colmedica.com/livianos.html" />
+<meta property="og:url" content="https://www.colmedica.com/livianos.html" />
+
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Colmédica Medicina Prepagada" />
-<meta property="og:title" content="Planes Livianos Colmédica | Medicina Prepagada Accesible" />
-<meta property="og:description" content="Complementa tu atención médica con los planes livianos de Colmédica. Medicina prepagada accesible para todos: 100% online, sin cuota de inscripción ni examen médico de ingreso." />
-<meta property="og:image" content="livianos/fotos/fondo-video.png" />
+<meta property="og:title" content="Planes Livianos Colmédica | Medicina Prepagada para Todos" />
+<meta property="og:description" content="Planes Livianos de Colmédica: medicina prepagada desde $46.989 al mes. Esmeralda Ambulatorio, Domiciliario Superior y Oncológico Vida Plus, 100% en línea." />
+<meta property="og:image" content="https://www.colmedica.com/livianos/fotos/og-image.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Planes Livianos Colmédica — Medicina Prepagada para Todos" />
+<!-- Twitter / X Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Planes Livianos Colmédica | Medicina Prepagada para Todos" />
+<meta name="twitter:description" content="Planes Livianos de Colmédica: medicina prepagada desde $46.989 al mes. Esmeralda Ambulatorio, Domiciliario Superior y Oncológico Vida Plus, 100% en línea." />
+<meta name="twitter:image" content="https://www.colmedica.com/livianos/fotos/og-image.jpg" />
+<meta name="twitter:image:alt" content="Planes Livianos Colmédica — Medicina Prepagada para Todos" />
 <meta property="og:locale" content="es_CO" />
 
 <!-- ============================================================
@@ -65,12 +84,13 @@ fbq('track','PageView');
 </script>
 
 <!-- Red Hat Display (manual de marca) -->
+<link rel="preload" as="image" href="livianos/fotos/badge-planes-livianos.png" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap" rel="stylesheet">
 
 <!-- El ?v= es la "versión". Cada vez que edites estilos.css, SUBE este número -->
-<link rel="stylesheet" href="livianos/css/estilos.css?v=5">
+<link rel="stylesheet" href="livianos/css/estilos.css?v=7">
 
 <!-- =========== DATOS ESTRUCTURADOS (schema.org / JSON-LD) =========== -->
 <script type="application/ld+json">
@@ -78,16 +98,32 @@ fbq('track','PageView');
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["MedicalOrganization", "Organization"],
-      "@id": "#organization",
+      "@type": [
+        "MedicalOrganization",
+        "Organization"
+      ],
+      "@id": "https://www.colmedica.com/#organization",
       "name": "Colmédica Medicina Prepagada",
       "alternateName": "Colmédica",
-      "url": "https://www.colmedica.com",
+      "url": "https://www.colmedica.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.colmedica.com/livianos/fotos/colmedica-logo-white.png",
+        "width": 195,
+        "height": 55
+      },
+      "image": "https://www.colmedica.com/livianos/fotos/og-image.jpg",
       "slogan": "En Colmédica te queremos bien",
-      "description": "Colmédica es una compañía de medicina prepagada en Colombia. Sus planes livianos ofrecen coberturas específicas con tarifas accesibles: consultas ambulatorias, atención domiciliaria y protección oncológica.",
-      "areaServed": { "@type": "Country", "name": "Colombia" },
+      "description": "Colmédica es una compañía de medicina prepagada en Colombia. Sus planes Livianos ofrecen coberturas específicas con tarifas accesibles: consultas ambulatorias, atención médica en casa y protección oncológica.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Colombia"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "CO"
+      },
       "sameAs": [
-        "https://www.colmedica.com",
         "https://www.facebook.com/Colmedica",
         "https://www.instagram.com/colmedica",
         "https://www.linkedin.com/company/colmedica",
@@ -95,24 +131,164 @@ fbq('track','PageView');
       ]
     },
     {
-      "@type": "OfferCatalog",
-      "@id": "#planes-livianos",
-      "name": "Planes Livianos de medicina prepagada Colmédica",
-      "provider": { "@id": "#organization" },
+      "@type": "WebSite",
+      "@id": "https://www.colmedica.com/#website",
+      "url": "https://www.colmedica.com/",
+      "name": "Planes Livianos Colmédica",
+      "inLanguage": "es-CO",
+      "publisher": {
+        "@id": "https://www.colmedica.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.colmedica.com/livianos.html#webpage",
+      "url": "https://www.colmedica.com/livianos.html",
+      "name": "Planes Livianos Colmédica | Medicina Prepagada para Todos",
+      "description": "Planes Livianos de Colmédica: medicina prepagada desde $46.989 al mes. Esmeralda Ambulatorio, Domiciliario Superior y Oncológico Vida Plus, 100% en línea.",
+      "isPartOf": {
+        "@id": "https://www.colmedica.com/#website"
+      },
+      "about": {
+        "@id": "https://www.colmedica.com/#organization"
+      },
+      "primaryImageOfPage": "https://www.colmedica.com/livianos/fotos/og-image.jpg",
+      "inLanguage": "es-CO",
+      "breadcrumb": {
+        "@id": "https://www.colmedica.com/livianos.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.colmedica.com/livianos.html#breadcrumb",
       "itemListElement": [
-        { "@type": "Offer", "name": "Plan Esmeralda Ambulatorio", "category": "Medicina prepagada", "price": "62432", "priceCurrency": "COP", "availability": "https://schema.org/InStock", "url": "plan-esmeralda-ambulatorio.html", "itemOffered": { "@type": "Service", "name": "Plan Esmeralda Ambulatorio", "serviceType": "Medicina prepagada", "provider": { "@id": "#organization" } } },
-        { "@type": "Offer", "name": "Plan Domiciliario Superior", "category": "Medicina prepagada", "price": "51254", "priceCurrency": "COP", "availability": "https://schema.org/InStock", "url": "plan-domiciliario-superior.html", "itemOffered": { "@type": "Service", "name": "Plan Domiciliario Superior", "serviceType": "Medicina prepagada", "provider": { "@id": "#organization" } } },
-        { "@type": "Offer", "name": "Plan Oncológico Vida Plus", "category": "Medicina prepagada", "price": "46989", "priceCurrency": "COP", "availability": "https://schema.org/InStock", "url": "plan-oncologico-vida-plus.html", "itemOffered": { "@type": "Service", "name": "Plan Oncológico Vida Plus", "serviceType": "Medicina prepagada", "provider": { "@id": "#organization" } } }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.colmedica.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Planes Livianos",
+          "item": "https://www.colmedica.com/livianos.html"
+        }
       ]
     },
     {
+      "@type": "OfferCatalog",
+      "@id": "https://www.colmedica.com/livianos.html#catalogo",
+      "name": "Planes Livianos de medicina prepagada Colmédica",
+      "provider": {
+        "@id": "https://www.colmedica.com/#organization"
+      },
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Plan Esmeralda Ambulatorio",
+          "price": "62432",
+          "priceCurrency": "COP",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "url": "https://www.colmedica.com/plan-esmeralda-ambulatorio.html",
+          "category": "Medicina prepagada",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Plan Esmeralda Ambulatorio",
+            "serviceType": "Medicina prepagada",
+            "provider": {
+              "@id": "https://www.colmedica.com/#organization"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Plan Domiciliario Superior",
+          "price": "51254",
+          "priceCurrency": "COP",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "url": "https://www.colmedica.com/plan-domiciliario-superior.html",
+          "category": "Medicina prepagada",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Plan Domiciliario Superior",
+            "serviceType": "Medicina prepagada",
+            "provider": {
+              "@id": "https://www.colmedica.com/#organization"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Plan Oncológico Vida Plus",
+          "price": "46989",
+          "priceCurrency": "COP",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "url": "https://www.colmedica.com/plan-oncologico-vida-plus.html",
+          "category": "Medicina prepagada",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Plan Oncológico Vida Plus",
+            "serviceType": "Medicina prepagada",
+            "provider": {
+              "@id": "https://www.colmedica.com/#organization"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "¿Cómo comprar en línea un plan Liviano de Colmédica?",
+      "description": "Video explicativo sobre cómo adquirir en línea un plan Liviano de medicina prepagada de Colmédica.",
+      "thumbnailUrl": "https://www.colmedica.com/livianos/fotos/og-image.jpg",
+      "contentUrl": "https://www.colmedica.com/livianos/videos/Bienvenida_e-commerce.mp4",
+      "uploadDate": "2026-07-01",
+      "duration": "PT34S",
+      "publisher": {
+        "@id": "https://www.colmedica.com/#organization"
+      },
+      "inLanguage": "es-CO"
+    },
+    {
       "@type": "FAQPage",
-      "@id": "#faq",
+      "@id": "https://www.colmedica.com/livianos.html#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "¿Qué son los planes Livianos de Medicina Prepagada para Todos de Colmédica?", "acceptedAnswer": { "@type": "Answer", "text": "Es una opción de medicina prepagada más económica pensada para proteger a tu familia sin comprometer tu presupuesto. A diferencia de los planes complementarios de las EPS, nuestros planes de medicina prepagada te ofrecen cobertura específica y acceso rápido a servicios de salud." } },
-        { "@type": "Question", "name": "¿Desde cuánto cuesta un plan Livianos de Medicina Prepagada para Todos?", "acceptedAnswer": { "@type": "Answer", "text": "Puedes acceder a nuestros planes desde $46.989 al mes. Tenemos 3 opciones de planes para que elijas la que mejor se adapte a ti y a tu familia." } },
-        { "@type": "Question", "name": "¿En qué se diferencian los planes Livianos de Medicina Prepagada para Todos de los planes complementarios de las EPS?", "acceptedAnswer": { "@type": "Answer", "text": "Los planes complementarios de las EPS dependen de la EPS base. Nuestros planes Livianos son independientes y te dan cobertura específica, atención directa y beneficios como la atención médica en casa o el acceso directo a más de 100 especialidades, además de disfrutar de la comodidad de los Centros Médicos Colmédica." } },
-        { "@type": "Question", "name": "¿Cómo puedo afiliarme a esta medicina prepagada más económica?", "acceptedAnswer": { "@type": "Answer", "text": "Es muy fácil. Puedes afiliarte en pocos minutos haciendo clic en el botón Cotízalo aquí. Afíliate hoy a un plan Liviano y garantiza para tu familia protección y cuidado con opciones de medicina prepagada más económica." } }
+        {
+          "@type": "Question",
+          "name": "¿Qué son los planes Livianos de Medicina Prepagada para Todos de Colmédica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es una opción de medicina prepagada más económica pensada para proteger a tu familia sin comprometer tu presupuesto. A diferencia de los planes complementarios de las EPS, nuestros planes de medicina prepagada te ofrecen cobertura específica y acceso rápido a servicios de salud."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Desde cuánto cuesta un plan Livianos de Medicina Prepagada para Todos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puedes acceder a nuestros planes desde $46.989 al mes. Tenemos 3 opciones de planes para que elijas la que mejor se adapte a ti y a tu familia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué se diferencian los planes Livianos de Medicina Prepagada para Todos de los planes complementarios de las EPS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los planes complementarios de las EPS dependen de la EPS base. Nuestros planes Livianos son independientes y te dan cobertura específica, atención directa y beneficios como la atención médica en casa o el acceso directo a más de 100 especialidades, además de disfrutar de la comodidad de los Centros Médicos Colmédica."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo puedo afiliarme a esta medicina prepagada más económica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es muy fácil. Puedes afiliarte en pocos minutos haciendo clic en el botón Cotízalo aquí. Afíliate hoy a un plan Liviano y garantiza para tu familia protección y cuidado con opciones de medicina prepagada más económica."
+          }
+        }
       ]
     }
   ]
@@ -134,7 +310,7 @@ fbq('track','PageView');
 <header class="site-header" id="siteHeader">
   <div class="wrap header-inner">
     <a href="#" class="logo-link" aria-label="Colmédica inicio">
-      <img src="livianos/fotos/colmedica-logo-white.png" alt="Colmédica" class="brand-logo">
+      <img src="livianos/fotos/colmedica-logo-white.png" alt="Colmédica" class="brand-logo" width="195" height="55" loading="eager" fetchpriority="high" decoding="async">
     </a>
 
     <nav class="main-nav">
@@ -166,7 +342,7 @@ fbq('track','PageView');
   <div class="wrap hero-wrap">
     <div class="hero-grid">
       <div class="hero-copy">
-        <img src="livianos/fotos/badge-planes-livianos.png" alt="Planes Livianos: Medicina Prepagada para Todos" class="hero-badge">
+        <img src="livianos/fotos/badge-planes-livianos.png" alt="Planes Livianos: Medicina Prepagada para Todos" class="hero-badge" width="420" height="247" loading="eager" fetchpriority="high" decoding="async">
         <h1>Planes <em>Livianos</em> Colmédica</h1>
         <p class="hero-sub">Proteger a tu familia sin comprometer tu presupuesto es posible con nuestros planes de medicina prepagada, una opción más económica y asequible para el bienestar de todos.</p>
         <div class="hero-ctas">
@@ -188,7 +364,7 @@ fbq('track','PageView');
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
           </span>
         </button>
-        <span class="vigilado-video"><img src="livianos/fotos/logo-SuperSalud-Res-white.png" alt="Vigilado Supersalud"></span>
+        <span class="vigilado-video"><img src="livianos/fotos/logo-SuperSalud-Res-white.png" alt="Vigilado Supersalud" width="366" height="44" loading="eager" fetchpriority="high" decoding="async"></span>
       </div>
     </div>
 
@@ -215,7 +391,7 @@ fbq('track','PageView');
         <!-- Plan Esmeralda Ambulatorio -->
         <article class="lplan-card">
           <button class="lplan-media" type="button" onclick="openPlanVideo('esmeralda')" aria-label="Ver video del Plan Esmeralda Ambulatorio">
-            <img src="livianos/fotos/EsmeraldaAmbulatorioHome.png" alt="Plan Esmeralda Ambulatorio" loading="lazy">
+            <img src="livianos/fotos/EsmeraldaAmbulatorioHome.png" alt="Plan Esmeralda Ambulatorio" loading="lazy" width="405" height="230" decoding="async">
             <span class="lplan-play-label">Ver video</span>
             <span class="lplan-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
           </button>
@@ -237,7 +413,7 @@ fbq('track','PageView');
         <!-- Plan Domiciliario Superior -->
         <article class="lplan-card">
           <button class="lplan-media" type="button" onclick="openPlanVideo('domiciliario')" aria-label="Ver video del Plan Domiciliario Superior">
-            <img src="livianos/fotos/DomiciliarioSuperiorHome.png" alt="Plan Domiciliario Superior" loading="lazy">
+            <img src="livianos/fotos/DomiciliarioSuperiorHome.png" alt="Plan Domiciliario Superior" loading="lazy" width="405" height="230" decoding="async">
             <span class="lplan-play-label">Ver video</span>
             <span class="lplan-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
           </button>
@@ -259,7 +435,7 @@ fbq('track','PageView');
         <!-- Plan Oncológico Vida Plus -->
         <article class="lplan-card">
           <button class="lplan-media" type="button" onclick="openPlanVideo('oncologico')" aria-label="Ver video del Plan Oncológico Vida Plus">
-            <img src="livianos/fotos/OncologicoHome.png" alt="Plan Oncológico Vida Plus" loading="lazy">
+            <img src="livianos/fotos/OncologicoHome.png" alt="Plan Oncológico Vida Plus" loading="lazy" width="405" height="230" decoding="async">
             <span class="lplan-play-label">Ver video</span>
             <span class="lplan-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
           </button>
@@ -581,10 +757,10 @@ fbq('track','PageView');
     <div class="footer-grid">
       <div class="footer-logos">
         <span class="footer-logo-main" aria-label="Colmédica">
-          <img src="livianos/fotos/colmedica-logo-white.png" alt="Colmédica" class="brand-logo-footer">
+          <img src="livianos/fotos/colmedica-logo-white.png" alt="Colmédica" class="brand-logo-footer" width="195" height="55" loading="eager" fetchpriority="high" decoding="async">
         </span>
-        <a href="https://www.supersalud.gov.co/" target="_blank" class="footer-supersalud" aria-label="Vigilado Supersalud">
-          <img src="livianos/fotos/supersalud.png" alt="Vigilado Supersalud">
+        <a href="https://www.supersalud.gov.co/" target="_blank" rel="noopener" class="footer-supersalud" aria-label="Vigilado Supersalud">
+          <img src="livianos/fotos/supersalud.png" alt="Vigilado Supersalud" width="366" height="44" loading="lazy" decoding="async">
         </a>
       </div>
 
@@ -595,7 +771,7 @@ fbq('track','PageView');
           <a href="https://portalmig.colmedica.com/Paginas/Proteccion-datos.aspx" target="_blank" rel="noopener">Política de tratamiento de Datos Personales de Colmédica</a><br>
           <a href="https://portalmig.colmedica.com/Productos/Paginas/terminos-y-condiciones.aspx" target="_blank" rel="noopener">Términos y Condiciones del Sitio</a>
         </div>
-        <img src="livianos/fotos/logo-payzen.svg" alt="Payzen" class="footer-payzen">
+        <img src="livianos/fotos/logo-payzen.svg" alt="Payzen" class="footer-payzen" loading="lazy" decoding="async">
       </div>
     </div>
 
@@ -612,10 +788,10 @@ fbq('track','PageView');
     <button class="modal-close" onclick="closePlanVideo()" aria-label="Cerrar">✕</button>
     <div class="modal-plan-video">
       <video id="planVideoPlayer" controls playsinline></video>
-      <span class="vigilado-video vigilado--pill"><img src="livianos/fotos/logo-SuperSalud-Res.png" alt="Vigilado Supersalud"></span>
+      <span class="vigilado-video vigilado--pill"><img src="livianos/fotos/logo-SuperSalud-Res.png" alt="Vigilado Supersalud" width="500" height="68" loading="lazy" decoding="async"></span>
     </div>
     <div class="modal-plan-body">
-      <h2 id="planVideoTitle"></h2>
+      <p class="modal-plan-h" id="planVideoTitle"></p>
       <p class="modal-plan-price" id="planVideoPrice"></p>
       <div class="modal-plan-desc" id="planVideoDesc"></div>
       <p class="modal-plan-cond" id="planVideoCond"></p>
@@ -628,7 +804,7 @@ fbq('track','PageView');
 </div>
 
 <!-- El ?v= es la "versión". Cada vez que edites app.js, SUBE este número -->
-<script src="livianos/js/app.js?v=5"></script>
+<script src="livianos/js/app.js?v=6"></script>
 
 </body>
 </html>
